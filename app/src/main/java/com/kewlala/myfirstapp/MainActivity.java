@@ -3,6 +3,7 @@ package com.kewlala.myfirstapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.BidiFormatter;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -22,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
             setContentView
          */
         TextView textView = findViewById(R.id.activityMainHelloWorldTxt);
-        textView.setText(R.string.hello_world);
+        BidiFormatter bidiFormatter = BidiFormatter.getInstance();
+        String helloWorld = getResources().getString(R.string.hello_world);
+        textView.setText(bidiFormatter.unicodeWrap(helloWorld));
     }
 
     /** Called when the user taps the Send button */

@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DisplayMessageActivity" android:parentActivityName=".MainActivity">
-            <!-- the meta data is necessary for compatiblity with API version 15 or lower -->
+            <!-- the meta data is necessary for compatiblity with API version 1 or lower -->
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
