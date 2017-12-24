@@ -14,9 +14,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        /* important note: we must call setContentView before
+            findViewById - we were getting a null pointer exception
+            when the code to get the textView was above the call to
+            setContentView
+         */
         TextView textView = findViewById(R.id.activityMainHelloWorldTxt);
         textView.setText(R.string.hello_world);
-        setContentView(R.layout.activity_main);
     }
 
     /** Called when the user taps the Send button */
